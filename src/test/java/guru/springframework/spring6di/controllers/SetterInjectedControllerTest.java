@@ -1,19 +1,20 @@
 package guru.springframework.spring6di.controllers;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
-import guru.springframework.spring6di.services.GreetingServiceImpl;
-
+@SpringBootTest
 class SetterInjectedControllerTest {
 
+  @Autowired
   private SetterInjectedController setterInjectedController;
 
-  @BeforeEach
-  void setUp() throws Exception {
-    setterInjectedController = new SetterInjectedController();
-    setterInjectedController.setGreetingService(new GreetingServiceImpl());
-  }
+  // @BeforeEach
+  // void setUp() throws Exception {
+  // setterInjectedController = new SetterInjectedController();
+  // setterInjectedController.setGreetingService(new GreetingServiceImpl());
+  // }
 
   @Test
   void sayHello() {
